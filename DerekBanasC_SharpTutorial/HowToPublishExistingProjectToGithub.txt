@@ -1,0 +1,20 @@
+﻿1.  Download install Visual Studio Comunity version 2017.
+
+2 Click Tools tab, in Visual Studio and choose Extensions and Updates
+
+3.Click Onling and chooae, Git Extension for Visual Studio, press ok then exit VS
+
+4. Allow git extension an all its components to install, and restart VS
+
+5. Create new project with create directory for solution, create a new git repository
+
+6. go to the bottom right side of VS app, click the number next to the changes pen
+
+7. Choose the publish to github repository, from the 3 choices, enter a description under project name
+
+8. press publish button
+
+9. If not signed in to github, click sign in with browser.  
+
+10 sign in and give github permision to sync with VS
+
