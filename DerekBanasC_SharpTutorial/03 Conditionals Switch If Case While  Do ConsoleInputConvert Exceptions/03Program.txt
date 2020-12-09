@@ -91,6 +91,7 @@ namespace DerekBanasC_SharpTutorial
             string name = "Derek";
             string name2 = "Derek";
 
+			// to ignore the case use: StringComparison.OrdinalIgnoreCase.
             if (name.Equals(name2, StringComparison.Ordinal))
             {
                 Console.WriteLine("Names are Equal");
@@ -131,7 +132,7 @@ namespace DerekBanasC_SharpTutorial
             // Use do while when you must execute the code
             // at least once
 
-            // Generate a random number between 1 and 11
+            // Generate a random number between 1 and 10, 1 included 11 not included
             Random rnd = new Random();
             int secretNumber = rnd.Next(1, 11);
             int numberGuessed = 0;
