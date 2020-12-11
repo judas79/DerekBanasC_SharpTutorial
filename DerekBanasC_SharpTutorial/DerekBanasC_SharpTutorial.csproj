@@ -55,6 +55,7 @@
     <Content Include="01 Data types Console Formating DateTime TimeSpan  padding String uses\01ProgramCS.txt" />
     <Content Include="02 Implicit LoopingArrays MultidimensionalArrays passIntFunction copyArray Preticate StringBuilder CultureSpecific castingf\02ProgramCS.txt" />
     <Content Include="03 Conditionals Switch If Case While  Do ConsoleInputConvert Exceptions\03Program.txt" />
+    <Content Include="04 Methods, Pass by Value versus Pass by Reference Out Parameter Params Named Parameters Method Overloading Enum\04 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

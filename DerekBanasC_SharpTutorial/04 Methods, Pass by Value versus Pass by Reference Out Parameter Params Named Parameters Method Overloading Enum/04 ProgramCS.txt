@@ -1,4 +1,8 @@
-﻿// Libraries containing functions and objects
+﻿/*
+Methods, Pass by Value versus Pass by Reference Out Parameter Params Named Parameters Method Overloading Enum and much more.
+*/
+
+// Libraries containing functions and objects
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -254,3 +258,4 @@ namespace DerekBanasC_SharpTutorial
     }
 
 }
+
