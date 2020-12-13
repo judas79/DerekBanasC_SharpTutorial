@@ -1,0 +1,92 @@
+﻿/*
+Classes, OPP, Methods, Fields, Constructors, Static Classes, Methods and Fields, Structs and Nullable Types.
+*/
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DerekBanasC_SharpTutorial
+{
+    // unlike struct, classes can inherit from classes and have sub classes
+    class Animal
+    {
+        // Attributes (fields) that all Animals have
+        // public means can be directly changed
+        // after an object has been created
+        public string name;
+        public string sound;
+        
+
+        // A constructor sets default values for 
+        // fields when an object is created
+        // same name as it class name
+        // This is the default constructor if no
+        // parameters are sent
+        public Animal()
+        {
+            // objects
+            name = "No Name";
+            sound = "No Sound";
+            numOfAnimals++;
+        }
+
+        // You can create additonal constructors,
+        // overloading, in casue user only passes in 1 string
+        // but since we are definig defaults you
+        // don't have to
+        // name refers to a passed in name
+        public Animal(string name = "No Name")
+        {
+            // 'this.name' refers to our objects version of name 
+            // and 'name' the passed in parameter version of name
+            // setting them equal to each other to enamble use of both
+            this.name = name;
+            this.sound = "No Sound";
+
+            // this increments the amount of animals for our 
+            // static GetNumAnimals() method
+            numOfAnimals++;
+        }
+
+        // We will use sN to pass in name for this example 
+        // instead of name, as we did above
+        public Animal(string sN = "No Name",
+            string sound = "No Sound")
+        {
+            // sinced we used sN instead of name above
+            // we don't have to define name as this.name
+            // since the vars are named differently
+            // we didn't rename sound, to show the difference as an example
+            name = sN;
+            this.sound = sound;
+            numOfAnimals++;
+        }
+
+        
+
+        // Capabilities (methods) that all Animals have
+        // this capability method, is used to call the name and sound
+        public void MakeSound()
+        {
+            Console.WriteLine("{0} says {1}",
+                name, sound);
+        }
+
+        // static fields and methods belong to the class, 
+        // and not the objects created for the class
+        // A static field has the same value for all
+        // objects of the Animal type. 
+        // if value changes for one object type, it changes all of them
+        static int numOfAnimals = 0;
+
+        // this method keeps track of all the animals that are created
+        public static int GetNumAnimals()
+        {
+            return numOfAnimals;
+        }
+    }
+}

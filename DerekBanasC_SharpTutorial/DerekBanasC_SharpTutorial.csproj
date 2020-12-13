@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShapeMath.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -56,6 +58,9 @@
     <Content Include="02 Implicit LoopingArrays MultidimensionalArrays passIntFunction copyArray Preticate StringBuilder CultureSpecific castingf\02ProgramCS.txt" />
     <Content Include="03 Conditionals Switch If Case While  Do ConsoleInputConvert Exceptions\03Program.txt" />
     <Content Include="04 Methods, Pass by Value versus Pass by Reference Out Parameter Params Named Parameters Method Overloading Enum\04 ProgramCS.txt" />
+    <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 ShapeMathCS.txt" />
+    <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 AnimalCS.txt" />
+    <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

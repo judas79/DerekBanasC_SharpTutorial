@@ -1,0 +1,55 @@
+﻿/*
+Classes, OPP, Methods, Fields, Constructors, Static Classes, Methods and Fields, Structs and Nullable Types.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DerekBanasC_SharpTutorial
+{
+    // You can also create static utility
+    // classes Project -> Add Class
+    // This class can only contain static methods
+    // and constant values
+    public static class ShapeMath
+    {       
+        // method receives a shape, shape default set to nothing,
+        // and or, lenght and width value, defaults set to 0
+        public static double GetArea(string shape = "",
+            double length1 = 0,
+            double length2 = 0)
+        {
+            // compares Rectangle to shape passed in
+            // ignores if entered in low or hi case
+            if (String.Equals("Rectangle",
+                shape,
+                StringComparison.OrdinalIgnoreCase))
+            {
+                // if shape is a rectangle return area
+                return length1 * length2;
+            }
+            // for a equalateral triangle
+            else if (String.Equals("Triangle",
+              shape,
+              StringComparison.OrdinalIgnoreCase))
+            {
+                return length1 * (length2 / 2);
+            }
+            // for a circle
+            else if (String.Equals("Circle",
+              shape,
+              StringComparison.OrdinalIgnoreCase))
+            {
+                return 3.14159 * Math.Pow(length1, 2);
+            }
+            // for anything else, -1 (indicitive that it is not a circle, triangle or rectangle)
+            else
+            {
+                return -1;
+            }
+        }
+    }
+}
