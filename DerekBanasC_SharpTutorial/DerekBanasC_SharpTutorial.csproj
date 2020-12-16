@@ -61,6 +61,8 @@
     <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 ShapeMathCS.txt" />
     <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 AnimalCS.txt" />
     <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 ProgramCS.txt" />
+    <Content Include="06 public private protected constants readonlyfields constructors setters getters properties moreonstatic\06 ProgramCS.txt" />
+    <Content Include="06 public private protected constants readonlyfields constructors setters getters properties moreonstatic\06 AnimalCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

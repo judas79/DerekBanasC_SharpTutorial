@@ -1,4 +1,9 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+public, private, protected, constants, read-only fields, constructors, setters, getters, properties and more on static
+*/
+
+
+// using directives, Libraries containing functions and objects
 using System;
 using System.Collections.Generic;
 using System.Linq;
