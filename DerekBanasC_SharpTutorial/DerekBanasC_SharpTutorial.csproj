@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="AnimalIDInfo.cs" />
+    <Compile Include="Dog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShapeMath.cs" />
@@ -63,6 +65,10 @@
     <Content Include="05 Classes OOP Methods Fields Constructors StaticClasses, Methods  Fields Structs NullableTypes\05 ProgramCS.txt" />
     <Content Include="06 public private protected constants readonlyfields constructors setters getters properties moreonstatic\06 ProgramCS.txt" />
     <Content Include="06 public private protected constants readonlyfields constructors setters getters properties moreonstatic\06 AnimalCS.txt" />
+    <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 AnimalCS.txt" />
+    <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 DogCS.txt" />
+    <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 AnimalIDInfoCS.txt" />
+    <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

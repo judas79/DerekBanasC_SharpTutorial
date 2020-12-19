@@ -1,4 +1,10 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+Inheritance, Aggregations, Virtual, Override, Inner Classes, New, Base, Polymorphism 
+*/
+
+
+
+// using directives, Libraries containing functions and objects
 using System;
 using System.Collections.Generic;
 using System.Linq;
