@@ -1,0 +1,55 @@
+﻿/*
+In this part of my C# tutorial series we will make a fun little game. I’m going to show how to create 2 warriors that will fight to the death in a simulated battle. 
+More complex video games follow many of the techniques we cover in this video. It also will show how awesome object oriented programming is in that it gives you the 
+ability to model just about any real world object, or interaction.
+*/
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DerekBanasC_SharpTutorial
+{
+    class Warrior
+    {
+        // Define the Warriors properties
+        public string Name { get; set; } = "Warrior";
+        public double Health { get; set; } = 0;
+        public double AttkMax { get; set; } = 0;
+        public double BlockMax { get; set; } = 0;
+
+        // Always create a single Random instance and reuse
+        // it or you will get the same value over and over
+        Random rnd = new Random();
+
+        // Constructor initializes the warrior
+        public Warrior(string name = "Warrior",
+            double health = 0,
+            double attkMax = 0,
+            double blockMax = 0)
+        {
+            Name = name;
+            Health = health;
+            AttkMax = attkMax;
+            BlockMax = blockMax;
+        }
+
+        // method, Generate a random attack value from 1
+        // to the warriors maximum attack value
+        public double Attack()
+        {
+            return rnd.Next(1, (int)AttkMax);
+        }
+
+        // method, Generate a random block value from
+        // 1 to the warriors maximum block
+        public double Block()
+        {
+            return rnd.Next(1, (int)BlockMax);
+        }
+    }
+}

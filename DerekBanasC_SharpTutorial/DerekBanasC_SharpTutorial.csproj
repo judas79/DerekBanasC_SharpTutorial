@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Battle.cs" />
+    <Compile Include="Warrior.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="AnimalIDInfo.cs" />
     <Compile Include="Dog.cs" />
@@ -69,6 +71,9 @@
     <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 DogCS.txt" />
     <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 AnimalIDInfoCS.txt" />
     <Content Include="07 Inheritance Aggregations Virtual Override InnerClasses New Base Polymorphism\07 ProgramCS.txt" />
+    <Content Include="08 OOP Game\08 ProgramCS.txt" />
+    <Content Include="08 OOP Game\08 WariorCS.txt" />
+    <Content Include="08 OOP Game\08 BattleCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

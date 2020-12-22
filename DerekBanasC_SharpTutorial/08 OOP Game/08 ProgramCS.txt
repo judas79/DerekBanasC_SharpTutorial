@@ -1,4 +1,12 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+In this part of my C# tutorial series we will make a fun little game. I’m going to show how to create 2 warriors that will fight to the death in a simulated battle. 
+More complex video games follow many of the techniques we cover in this video. It also will show how awesome object oriented programming is in that it gives you the 
+ability to model just about any real world object, or interaction.
+*/
+
+
+
+// using directives, Libraries containing functions and objects
 using System;
 using System.Collections.Generic;
 using System.Linq;
