@@ -45,7 +45,7 @@ namespace DerekBanasC_SharpTutorial
         // of the Shape class
         public override void GetInfo()
         {
-            // Execute the base version
+            // Execute the base version, the version in Shape.cs
             base.GetInfo();
             // add this to the base getinfo
             Console.WriteLine($"It has a Radius of {Radius}");
