@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Battle.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Shape.cs" />
     <Compile Include="Warrior.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="AnimalIDInfo.cs" />
@@ -74,6 +77,10 @@
     <Content Include="08 OOP Game\08 ProgramCS.txt" />
     <Content Include="08 OOP Game\08 WariorCS.txt" />
     <Content Include="08 OOP Game\08 BattleCS.txt" />
+    <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 ShapeCS.txt" />
+    <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 ProgramCS.txt" />
+    <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 CircleCS.txt" />
+    <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 Rectangle .txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

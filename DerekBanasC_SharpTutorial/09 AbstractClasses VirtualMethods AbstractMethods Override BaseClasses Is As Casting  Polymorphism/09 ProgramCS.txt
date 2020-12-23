@@ -1,4 +1,11 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+In this part of my C# tutorial we’ll be covering Abstract Classes, Virtual Methods, Abstract Methods, Override, Base Classes, Is, As, 
+Casting and more about Polymorphism.
+*/
+
+
+
+// using directives, Libraries containing functions and objects
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,3 +85,4 @@ namespace DerekBanasC_SharpTutorial
     }
 
 }
+
