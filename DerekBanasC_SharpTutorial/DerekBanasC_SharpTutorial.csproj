@@ -35,7 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IElectronicDevice.cs" />
+    <Compile Include="PowerButton.cs" />
+    <Compile Include="Television.cs" />
+    <Compile Include="TVRemote.cs" />
+    <Compile Include="Vehicle.cs" />
     <Compile Include="Battle.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="IDrivable.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Warrior.cs" />
@@ -59,7 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="01 Data types Console Formating DateTime TimeSpan  padding String uses\01ProgramCS.txt" />
     <Content Include="02 Implicit LoopingArrays MultidimensionalArrays passIntFunction copyArray Preticate StringBuilder CultureSpecific castingf\02ProgramCS.txt" />
@@ -81,6 +89,14 @@
     <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 ProgramCS.txt" />
     <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 CircleCS.txt" />
     <Content Include="09 AbstractClasses VirtualMethods AbstractMethods Override BaseClasses Is As Casting  Polymorphism\09 Rectangle .txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 IDrivableCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 VehicleCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 ProgramCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 IElectronicDeviceCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 TelevisionCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 ICommandCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 PowerButtonCS.txt" />
+    <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 TVRemoteCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

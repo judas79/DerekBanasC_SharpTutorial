@@ -1,4 +1,20 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+8 cs files:
+// ---------- IDrivable.cs -------
+// ---------- Vehicle.cs ---------
+// ---------- Program.cs ---------
+// ---------- IElectronicDevice.cs 
+// ---------- Television.cs ------
+// ---------- ICommand.cs --------
+// ---------- PowerButton.cs -----
+// ---------- TVRemote.cs --------
+
+In this part of my C# tutorial we’ll look at Interfaces using both a simple example and another that is rather complex. We’ll also look at Abstract Methods, Inheriting an Interface, 
+How to Create Flexible Designs, and the Command Design Pattern.
+*/
+
+
+// using directives, Libraries containing functions and objects
 using System;
 using System.Collections.Generic;
 using System.Linq;

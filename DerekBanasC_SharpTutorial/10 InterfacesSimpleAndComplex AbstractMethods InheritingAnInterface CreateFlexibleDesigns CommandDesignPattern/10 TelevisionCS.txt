@@ -1,0 +1,55 @@
+﻿/*
+8 cs files:
+// ---------- IDrivable.cs -------
+// ---------- Vehicle.cs ---------
+// ---------- Program.cs ---------
+// ---------- IElectronicDevice.cs 
+// ---------- Television.cs ------
+// ---------- ICommand.cs --------
+// ---------- PowerButton.cs -----
+// ---------- TVRemote.cs --------
+
+In this part of my C# tutorial we’ll look at Interfaces using both a simple example and another that is rather complex. We’ll also look at Abstract Methods, Inheriting an Interface, 
+How to Create Flexible Designs, and the Command Design Pattern.
+*/
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DerekBanasC_SharpTutorial
+{
+    // Because we implemented the 
+    // ElectronicDevice interface any
+    // other device we create will know
+    // exactly how to interface with it.
+    class Television : IElectronicDevice
+    {
+        public int Volume { get; set; }
+
+        public void Off()
+        {
+            Console.WriteLine("The TV is Off");
+        }
+
+        public void On()
+        {
+            Console.WriteLine("The TV is On");
+        }
+
+        public void VolumeDown()
+        {
+            if (Volume != 0) Volume--;
+            Console.WriteLine($"The TV Volume is at {Volume}");
+        }
+
+        public void VolumeUp()
+        {
+            if (Volume != 100) Volume++;
+            Console.WriteLine($"The TV Volume is at {Volume}");
+        }
+    }
+}
