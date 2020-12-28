@@ -1,4 +1,9 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+In this part of my C# tutorial we’ll explore many collections available with C#. We’ll look at ArrayLists, Dictionaries, Queues, and Stacks. 
+We’ll test out most every function available with them.
+*/
+
+// using directives, Libraries containing functions and objects
 using System;
 // use dictionaries
 using System.Collections.Generic;
