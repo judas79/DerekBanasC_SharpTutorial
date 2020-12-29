@@ -1,4 +1,10 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+Well come to part 12 of my C# tutorial. This tutorial will focus on Generic Collections, Generic Methods, Generic Structs, and more on Delegates. 
+We are getting near the end and so we are covering some of the really cool things C# can do.
+*/
+
+
+// using directives, Libraries containing functions and objects
 using System;
 // use dictionaries
 using System.Collections.Generic;

@@ -60,7 +60,7 @@
     <Compile Include="Warrior.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="AnimalIDInfo.cs" />
-    <Compile Include="Dog.cs" />
+    <None Include="Dog.Disabledcs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShapeMath.cs" />
@@ -98,7 +98,10 @@
     <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 PowerButtonCS.txt" />
     <Content Include="10 InterfacesSimpleAndComplex AbstractMethods InheritingAnInterface CreateFlexibleDesigns CommandDesignPattern\10 TVRemoteCS.txt" />
     <Content Include="11 ArrayLists Dictionaries Queues and Stacks\11 ProgramCS.txt" />
+    <Content Include="12 GenericCollections GenericMethods GenericStructs Delegates\12 AnimalCS.txt" />
+    <Content Include="12 GenericCollections GenericMethods GenericStructs Delegates\12 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
