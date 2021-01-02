@@ -1,4 +1,9 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+This time I’ll cover multiple functions you can use to work with lists of data including Lambda, Where, ToList, Select, Zip, Aggregate Average All Any Distinct Except and Intersect
+*/
+
+
+// using directives, Libraries containing functions and objects
 using System;
 // use dictionaries
 using System.Collections.Generic;

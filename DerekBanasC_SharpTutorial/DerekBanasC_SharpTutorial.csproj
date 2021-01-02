@@ -100,8 +100,11 @@
     <Content Include="11 ArrayLists Dictionaries Queues and Stacks\11 ProgramCS.txt" />
     <Content Include="12 GenericCollections GenericMethods GenericStructs Delegates\12 AnimalCS.txt" />
     <Content Include="12 GenericCollections GenericMethods GenericStructs Delegates\12 ProgramCS.txt" />
+    <Content Include="13 multipleFunctions  with lists of data including Lambda Where ToList Select Zip Aggregate  Average All Any Distinct Except and Intersect\13 ProgrmCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
