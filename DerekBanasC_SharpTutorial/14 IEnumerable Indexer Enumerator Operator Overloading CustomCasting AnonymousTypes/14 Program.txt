@@ -1,4 +1,10 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+I cover a bunch of cool things you can do with C# in this tutorial. We’ll learn about IEnumerable, Indexer, Enumerator, Operator Overloading, Custom Casting, Anonymous Types and more.
+*/
+
+
+
+// using directives, Libraries containing functions and objects
 using System;
 // use dictionaries
 using System.Collections.Generic;

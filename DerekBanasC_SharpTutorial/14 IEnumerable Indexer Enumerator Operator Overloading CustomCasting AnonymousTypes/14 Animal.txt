@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+I cover a bunch of cool things you can do with C# in this tutorial. We’ll learn about IEnumerable, Indexer, Enumerator, Operator Overloading, Custom Casting, Anonymous Types and more.
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

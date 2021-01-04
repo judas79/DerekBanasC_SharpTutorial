@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalFarm.cs" />
+    <Compile Include="Box.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IElectronicDevice.cs" />
     <Compile Include="PowerButton.cs" />
@@ -101,10 +103,12 @@
     <Content Include="12 GenericCollections GenericMethods GenericStructs Delegates\12 AnimalCS.txt" />
     <Content Include="12 GenericCollections GenericMethods GenericStructs Delegates\12 ProgramCS.txt" />
     <Content Include="13 multipleFunctions  with lists of data including Lambda Where ToList Select Zip Aggregate  Average All Any Distinct Except and Intersect\13 ProgrmCS.txt" />
+    <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 Program.txt" />
+    <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 Box.txt" />
+    <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 Animal.txt" />
+    <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 AnimalFarm.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
