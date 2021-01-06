@@ -50,6 +50,7 @@
     <Compile Include="Box.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IElectronicDevice.cs" />
+    <Compile Include="Owner.cs" />
     <Compile Include="PowerButton.cs" />
     <Compile Include="Television.cs" />
     <Compile Include="TVRemote.cs" />
@@ -107,6 +108,9 @@
     <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 Box.txt" />
     <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 Animal.txt" />
     <Content Include="14 IEnumerable Indexer Enumerator Operator Overloading CustomCasting AnonymousTypes\14 AnimalFarm.txt" />
+    <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 AnimalCS.txt" />
+    <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 OwnerCS.txt" />
+    <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <ItemGroup />

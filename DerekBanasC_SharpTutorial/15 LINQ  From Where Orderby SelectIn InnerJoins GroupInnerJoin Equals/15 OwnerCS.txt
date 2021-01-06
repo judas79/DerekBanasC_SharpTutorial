@@ -1,0 +1,20 @@
+﻿/*
+In this video I’ll cover LINQ. Language Integrated Query (LINQ) provides many tools for working with data. LINQ is similar to SQL, but it can work with data aside from databases. 
+I’ll cover From, Where, Orderby, Select, In, Inner Joins, Group Inner Join, Equals and using LINQ with multiple different collections.
+*/
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DerekBanasC_SharpTutorial
+{
+    class Owner
+    {
+        public string Name { get; set; }
+        public int OwnerID { get; set; }
+    }
+}
