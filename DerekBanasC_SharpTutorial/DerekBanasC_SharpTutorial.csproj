@@ -111,6 +111,7 @@
     <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 AnimalCS.txt" />
     <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 OwnerCS.txt" />
     <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 ProgramCS.txt" />
+    <Content Include="16 simpleThread Sleep  Lock Priority passDataTo thread\16 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
   </ItemGroup>
   <ItemGroup />

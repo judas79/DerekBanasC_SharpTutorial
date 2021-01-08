@@ -1,4 +1,10 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+In this part of my C# tutorial I’ll cover threads in depth. With threads you can execute multiple pieces of code that share resources and data without corrupting it. 
+I cover a simple thread example, sleep, a more advanced with lock, Priority, and how to pass data to a thread.
+There are three sections, in this tutorial.  These examples all use our Main method, so uncomment one section at a time, as you comment out the other two sections.
+*/
+
+// using directives, Libraries containing functions and objects
 using System;
 // use dictionaries
 using System.Collections.Generic;
