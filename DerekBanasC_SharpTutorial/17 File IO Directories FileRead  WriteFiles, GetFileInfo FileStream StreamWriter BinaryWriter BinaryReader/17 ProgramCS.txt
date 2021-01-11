@@ -1,4 +1,14 @@
-﻿// using directives, Libraries containing functions and objects
+﻿/*
+This part of my C# tutorial is based completely on File I/O. We’ll learn how to Mess with Directories, Use File to Read and Write to Files, Get FileInfo, 
+Use FileStream, Use StreamWriter, Use BinaryWriter & BinaryReader, and much more.
+
+// Start VS with admin rights by
+// right clicking it and run as 
+// administrator
+*/
+
+
+// using directives, Libraries containing functions and objects
 using System;
 // use dictionaries
 using System.Collections.Generic;

@@ -113,6 +113,7 @@
     <Content Include="15 LINQ  From Where Orderby SelectIn InnerJoins GroupInnerJoin Equals\15 ProgramCS.txt" />
     <Content Include="16 simpleThread Sleep  Lock Priority passDataTo thread\16 ProgramCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
+    <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
