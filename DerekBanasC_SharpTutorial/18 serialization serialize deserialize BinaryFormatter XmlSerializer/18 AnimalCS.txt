@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+This part of my C# tutorial is all about serialization. With serialization you can store the state of an object in a file stream, 
+pass it to a remote network and more. We’ll store data using BinaryFormatter, XmlSerializer and so much more.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
