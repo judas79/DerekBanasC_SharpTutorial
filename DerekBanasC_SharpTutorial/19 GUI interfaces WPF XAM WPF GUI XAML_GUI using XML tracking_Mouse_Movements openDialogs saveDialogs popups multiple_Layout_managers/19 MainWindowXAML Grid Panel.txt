@@ -1,0 +1,89 @@
+<!-- 
+This is the 1st of many videos about designing GUI interfaces with WPF and XAML. Windows Presentation Foundation (WPF) is used to create graphical user interfaces. 
+Using XAML eXtensible Application Markup Language you can create the UI using XML like tags.
+We’ll also look at event handling, tracking mouse movements, open dialogs, save dialogs, popups, multiple layout managers and much more.
+-->
+<!--************ MainWindow.xaml **************-->
+    <!-- x:Class defines what code handles events -->
+<!-- You can define the title, size, whether it can resize,
+    Whether it automatically resizes for content, whether
+    it stays on top, whether it starts minimized or maximized,
+    and an icon
+    below is the namespace and the height and width of our window-->
+<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Hello WPF" Height="350" Width="525" ResizeMode="CanResize" SizeToContent="WidthAndHeight" Topmost="False" WindowState="Normal"
+        Icon="./Resources/RobotRods16.ico" MouseMove="Window_MouseMove">
+
+    <!-- You can store data as a resource and reuse it by adding this
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" -->
+    <Window.Resources>
+        <sys:String x:Key="strHelloAgain">Hello Again</sys:String>
+
+        <!-- You can define default styling of
+        components -->
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+        </Style>
+    </Window.Resources>
+
+    <!-- ************ Using Grid ************ -->
+ 
+<!-- A Grid Panels are very flexible because 
+    everything is placed in a cell in columns
+    and rows 
+    You add rows and columns by adding RowDefinitions
+    and ColumnDefinitions that have heights that
+    are fixed, Auto (Takes space needed by component),
+    or * (Takes space available)-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!-- Define where component starts and the number of columns it spans, 
+        drag a TextBox to the top column 0, row 0, Margin spaces on side 2 pixels and 5 top & bottom
+        add in property Grid.Row="0" and Grid.Column... and set Grid.ColumnSpan to span all 4 
+        get rid of the unused properties added at creation of the TextBox -->
+        <TextBox Grid.Row="0" Grid.Column="0" Margin="2,5" Grid.ColumnSpan="4"/>
+        <Button Content="7" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="8" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="9" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="+" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="51"/>
+
+        <Button Content="4" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="5" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="6" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="-" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="131" Height="51"/>
+
+        <Button Content="1" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="2" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="3" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="*" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="131" Height="51"/>
+
+        <Button Content="C" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="0" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="=" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="131" Height="51"/>
+        <Button Content="/" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="131" Height="51"/>
+    </Grid>
+
+</Window>

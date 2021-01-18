@@ -114,8 +114,14 @@
     <Content Include="16 simpleThread Sleep  Lock Priority passDataTo thread\16 ProgramCS.txt" />
     <Content Include="18 serialization serialize deserialize BinaryFormatter XmlSerializer\18 ProgramCS.txt" />
     <Content Include="18 serialization serialize deserialize BinaryFormatter XmlSerializer\18 AnimalCS.txt" />
+    <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowXAML Canvas Panel.txt" />
+    <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowXAML Grid Panel.txt" />
+    <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowXAML Stack Panel.txt" />
+    <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowXAML Wrap Panel.txt" />
+    <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowxamlCS.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
+    <Content Include="Resources\RobotRods16.ico" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
