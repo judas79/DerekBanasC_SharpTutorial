@@ -1,0 +1,165 @@
+﻿/*
+In this part of my C# tutorial we’ll continue learning about WPF and XAML. We’ll cover the MenuBars, Assigning Shortcuts, 
+Grid Layout, ScrollViewer, DockPanel, Changing Fonts, the OpenFileDialog, the SaveFileDialog and a whole lot more.
+/*
+Create rows and columns by click on the outside borders of the box in the MainWindow.xaml, along the sides, 
+and drag the dividers, where you want them.
+/*
+
+
+using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+// Windows Presentation Foundation (WPF)
+// is used to create graphical user interfaces
+// of a traditional format or within a
+// browser (XAML Browser Based App / XBAP)
+
+// Using XAML eXtensible Application Markup Language
+// you can create the UI using XML
+// XAML allows you to define buttons, boxes,
+// animations, 2d / 3d graphics and more
+
+// Create a New Project -> Visual C# -> Windows
+// Classic Desktop -> WPF App
+
+namespace WpfApp1
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            // L19 Initializes and displays the window
+            InitializeComponent();
+
+            // L19 You can set window properties in code
+            this.Title = "Mouse Position";
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            
+        }
+
+        // ----------- Tutorial 19 starts here -----------
+        //
+        // This method was generated from the MainWindow.xaml after typing MouseMove= 
+        // in the  MainWindow.xaml, we then click on the 'new event handler' popup to generate our method
+        private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
+            // when mouse moves, display x and y coordinates in the Title, 'this' is the mouse
+            Title = e.GetPosition(this).ToString();
+
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("The app is Closing", "Close app");
+            this.Close();
+        }
+
+        private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.ShowDialog();
+        }
+
+        private void BtnSaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.ShowDialog();
+        }
+
+        // ---------------- Tutorial 20 starts here ---------------
+        //
+        // Closes the app
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        // Opens the open dialog
+        private void MenuNew_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveDlg = new SaveFileDialog();
+            if (txtBoxDoc.Text.Count() > 0)
+            {
+                MessageBoxResult result = MessageBox.Show("Do you want to save this Document?",
+                "Confirmation", MessageBoxButton.YesNoCancel);
+                if (result == MessageBoxResult.Yes)
+                {
+                    // call MenuSave_Click to save current document, not sure what to put in the arguements
+                    MenuSave_Click(0, null);
+
+                    // Clear document, making it as new
+                    txtBoxDoc.Text = null;
+                }
+                else if (result == MessageBoxResult.No)
+                {
+                    // Clear document, making it as new
+                    txtBoxDoc.Clear();
+                }  
+                else  
+                {
+                    // Cancel code here  
+                }
+            }
+        }
+
+        // Opens the open dialog
+        private void MenuOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openDlg = new OpenFileDialog();
+            if(openDlg.ShowDialog()==true)
+                txtBoxDoc.Text = System.IO.File.ReadAllText(openDlg.FileName);
+        }
+
+        // Opens the save dialog
+        private void MenuSave_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveDlg = new SaveFileDialog();
+            saveDlg.FileName = DateTime.Now.ToString();
+            saveDlg.FileName = saveDlg.FileName.Replace(":", "").Replace("/", "-"); 
+            saveDlg.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (saveDlg.ShowDialog()==true)
+                {
+                System.IO.File.WriteAllText(saveDlg.FileName, txtBoxDoc.Text);
+            }
+        }
+
+        // Unchecks other fonts and changes font for the text box
+        private void MenuFontTimes_Click(object sender, RoutedEventArgs e)
+        {
+            menuFontCourier.IsChecked = false;
+            menuFontArial.IsChecked = false;
+            txtBoxDoc.FontFamily = new FontFamily("Times New Roman");
+        }
+
+        private void MenuFontCourier_Click(object sender, RoutedEventArgs e)
+        {
+            menuFontTimes.IsChecked = false;
+            menuFontArial.IsChecked = false;
+            txtBoxDoc.FontFamily = new FontFamily("Courier");
+        }
+
+        private void MenuFontArial_Click(object sender, RoutedEventArgs e)
+        {
+            menuFontCourier.IsChecked = false;
+            menuFontTimes.IsChecked = false;
+            txtBoxDoc.FontFamily = new FontFamily("Arial");
+        }
+    }
+}

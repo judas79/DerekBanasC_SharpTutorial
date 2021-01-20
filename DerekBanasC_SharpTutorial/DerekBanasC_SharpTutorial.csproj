@@ -119,9 +119,20 @@
     <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowXAML Stack Panel.txt" />
     <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowXAML Wrap Panel.txt" />
     <Content Include="19 GUI interfaces WPF XAM WPF GUI XAML_GUI using XML tracking_Mouse_Movements openDialogs saveDialogs popups multiple_Layout_managers\19 MainWindowxamlCS.txt" />
+    <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\20 DockPanel MainWindow.xaml.txt" />
+    <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\20 Grid ScrollViewer MainWindow.xaml.txt" />
+    <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\20 MainWindow.xaml.cs.txt" />
+    <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\20 Menu in DockPanel MainWindow.xaml.txt" />
+    <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\MenuTextEditor.exe" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
+    <Content Include="Resources\Copy.bmp" />
+    <Content Include="Resources\Cut.bmp" />
+    <Content Include="Resources\New.ico" />
+    <Content Include="Resources\Open.bmp" />
+    <Content Include="Resources\Paste.bmp" />
     <Content Include="Resources\RobotRods16.ico" />
+    <Content Include="Resources\Save.bmp" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
