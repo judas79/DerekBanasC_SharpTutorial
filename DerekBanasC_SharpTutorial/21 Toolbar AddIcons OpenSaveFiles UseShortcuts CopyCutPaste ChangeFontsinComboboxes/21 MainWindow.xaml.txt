@@ -1,0 +1,149 @@
+﻿<!--************ MainWindow.xaml **************-->
+<!-- x:Class defines what code handles events -->
+<!-- You can define the title, size, whether it can resize,
+    Whether it automatically resizes for content, whether
+    it stays on top, whether it starts minimized or maximized,
+    and an icon
+    below is the namespace and the height and width of our window-->
+<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Hello WPF" Height="350" Width="525" ResizeMode="CanResize" SizeToContent="WidthAndHeight" Topmost="False" WindowState="Normal"
+        Icon="./Resources/RobotRods16.ico" MouseMove="Window_MouseMove">
+
+  <!-- You can store data as a resource and reuse it by adding this
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" -->
+  <Window.Resources>
+    <sys:String x:Key="strHelloAgain">Hello Again</sys:String>
+
+    <!-- You can define default styling of
+        components -->
+    <Style TargetType="Button">
+      <Setter Property="Margin" Value="1"/>
+      <Setter Property="FontSize" Value="20"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="FontFamily" Value="Consolas"/>
+    </Style>
+  </Window.Resources>
+  <!-- Create a menu bar, text editor w/ File and Edit menu. 
+  Put _ before the shortcut key which is triggered with Alt - Whatever -->
+    <!-- 1. Get the Visual Studio Image Library if you want standard icons
+	A. https://www.microsoft.com/en-us/download/details.aspx?id=35825
+    B. I got VS2013 Image Library.zip 
+    -->
+  <DockPanel>
+    <Menu DockPanel.Dock="Top"> 
+      <MenuItem Header="_File" ToolTip="Not for your fingernails!">
+        <!-- everything below the File Heading, InputGestureText, shows shortcut -->
+                <MenuItem x:Name="menuNew" Header="_New"
+                  InputGestureText="Ctrl+N" Click="MenuNew_Click">
+          <MenuItem.Icon>
+            <Image Source="./Resources/New.ico"/>
+          </MenuItem.Icon>        
+        </MenuItem>
+      <MenuItem x:Name="menuOpen" Header="_Open"
+                  InputGestureText="Ctrl+O" Click="MenuOpen_Click">
+          <MenuItem.Icon>
+            <Image Source="./Resources/Open.bmp"/>
+          </MenuItem.Icon>        
+        </MenuItem>
+      <MenuItem x:Name="menuSave" Header="_Save"
+                  InputGestureText="Ctrl+S" Click="MenuSave_Click">
+          <MenuItem.Icon>
+            <Image Source="./Resources/Save.bmp"/>
+          </MenuItem.Icon>        
+        </MenuItem>
+      <MenuItem x:Name="menuExit" Header="E_XIT"
+                  InputGestureText="Ctrl+F4" Click="MenuExit_Click">      
+        </MenuItem>
+      </MenuItem>
+    <!--Edit Heading-->
+    <MenuItem Header="_Edit" ToolTip="Should I leave this tool tip, here?">
+      <MenuItem x:Name="menuCut" Header="cut '_X'" Command="ApplicationCommands.Cut"
+                InputGestureText="Ctrl+X">
+        <MenuItem.Icon>
+            <Image Source="./Resources/Cut.bmp"/>
+          </MenuItem.Icon>        
+      </MenuItem>
+    <MenuItem x:Name="menuCopy" Header="_Copy" Command="ApplicationCommands.Copy"
+                InputGestureText="Ctrl+C">
+        <MenuItem.Icon>
+            <Image Source="./Resources/Copy.bmp"/>
+          </MenuItem.Icon>        
+      </MenuItem>
+    <MenuItem x:Name="menuPaste" Header="Paste '_V'" Command="ApplicationCommands.Paste"
+                InputGestureText="Ctrl+V">
+        <MenuItem.Icon>
+            <Image Source="./Resources/Paste.bmp"/>
+          </MenuItem.Icon>        
+      </MenuItem>
+    
+      <Separator/>
+    <MenuItem Header="_Font" InputGestureText="Ctrl+F">
+      <MenuItem x:Name="menuFontTimes" Header="Times"
+                IsCheckable="True" StaysOpenOnClick="True"
+        Click="MenuFontTimes_Click"/>
+      <MenuItem x:Name="menuFontCourier" Header="Courier"
+                IsCheckable="True" StaysOpenOnClick="True"
+        Click="MenuFontCourier_Click"/>
+    <MenuItem x:Name="menuFontArial" Header="Arial"
+                IsCheckable="True" StaysOpenOnClick="True"
+        Click="MenuFontArial_Click"/>
+      </MenuItem>
+    </MenuItem>
+    </Menu>
+
+            <!-- *********** Tutorial 21 Toolbar ************ -->
+
+            <!-- A toolbar provides quick access to tools -->
+            <!-- You can also dock on the left or right
+        DockPanel.Dock="Right" Orientation="Vertical" -->
+
+            <ToolBarTray DockPanel.Dock ="Top">
+                <ToolBar>
+                    <!-- " Throw in the buttons -->
+                    <Button x:Name="tbNew" ToolTip="New File" Click="MenuNew_Click">
+                        <Image Source="./Resources/New.bmp"></Image>
+                    </Button>
+                    <Button x:Name="tbOpen" ToolTip="Open File" Click="MenuOpen_Click">
+                        <Image Source="./Resources/Open.bmp"></Image>
+                    </Button>
+                    <Button x:Name="tbSave" ToolTip="Save File" Click="MenuSave_Click">
+                        <Image Source="./Resources/Save.bmp"></Image>
+                    </Button>
+                <Separator></Separator>
+                    <Button x:Name="tbCut" ToolTip="Copy Selection while Removing that Selection" Command="ApplicationCommands.Cut">
+                        <Image Source="./Resources/Cut.bmp"></Image>
+                    </Button>
+                    <Button x:Name="tbCopy" ToolTip="Copies Selection" Command="ApplicationCommands.Copy">
+                        <Image Source="./Resources/Copy.bmp"></Image>
+                    </Button>
+                    <Button x:Name="tbPaste" ToolTip="Pastes Selection" Command="ApplicationCommands.Paste">
+                        <Image Source="./Resources/Paste.bmp"></Image>
+                    </Button>
+                    <Separator></Separator>
+                    <!---In the Toolbar we can use all the items in the toolBox.  We will use a ComboBox-->
+                    <!---In the ComboBox use SelectionChanged to get changes, also make DropDownClosed for when ComboBox is closed-->
+                    <Label ToolTip="How do you keep a Polock entertained?">Font Size</Label>
+                <ComboBox x:Name="comboFontSize" ToolTip="choose desired font size Here!" SelectionChanged="ComboFontSize_SelectionChanged"
+                              DropDownClosed="ComboFontSize_DropDownClosed">
+                        <ComboBoxItem>10</ComboBoxItem>
+                        <ComboBoxItem IsSelected="True">12</ComboBoxItem>
+                        <ComboBoxItem>14</ComboBoxItem>
+                        <ComboBoxItem>16</ComboBoxItem>
+                    </ComboBox>
+                </ToolBar>
+                
+            </ToolBarTray>
+        
+
+        <TextBox x:Name="txtBoxDoc" MinWidth="200" MinHeight="100" Width="Auto" Height="Auto" TextWrapping="Wrap"
+            AcceptsReturn="True"/>
+    </DockPanel>
+
+</Window>

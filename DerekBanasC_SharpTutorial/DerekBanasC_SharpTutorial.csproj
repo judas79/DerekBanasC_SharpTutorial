@@ -124,10 +124,13 @@
     <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\20 MainWindow.xaml.cs.txt" />
     <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\20 Menu in DockPanel MainWindow.xaml.txt" />
     <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\MenuTextEditor.exe" />
+    <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\21 MainWindow.xaml.cs.txt" />
+    <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\21 MainWindow.xaml.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
     <Content Include="Resources\Copy.bmp" />
     <Content Include="Resources\Cut.bmp" />
+    <Content Include="Resources\New.bmp" />
     <Content Include="Resources\New.ico" />
     <Content Include="Resources\Open.bmp" />
     <Content Include="Resources\Paste.bmp" />
