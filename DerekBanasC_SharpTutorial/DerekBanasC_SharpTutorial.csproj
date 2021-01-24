@@ -126,6 +126,7 @@
     <Content Include="20 MenuBars AssigningShortcuts GridLayout ScrollViewer DockPanel ChangingFonts OpenFileDialog SaveFileDialog\MenuTextEditor.exe" />
     <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\21 MainWindow.xaml.cs.txt" />
     <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\21 MainWindow.xaml.txt" />
+    <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\MenuTextEditor_2.exe" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
     <Content Include="Resources\Copy.bmp" />
