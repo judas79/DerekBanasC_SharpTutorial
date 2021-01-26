@@ -1,0 +1,256 @@
+﻿/*
+In this part of my C# tutorial I cover Tabs, Calendars, InkCanvas, How to Make a Paint App, 
+StackPanels, Toolbars and a whole lot more.
+*/
+
+
+using Microsoft.Win32;
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Ink;
+
+// Windows Presentation Foundation (WPF)
+// is used to create graphical user interfaces
+// of a traditional format or within a
+// browser (XAML Browser Based App / XBAP)
+
+// Using XAML eXtensible Application Markup Language
+// you can create the UI using XML
+// XAML allows you to define buttons, boxes,
+// animations, 2d / 3d graphics and more
+
+// Create a New Project -> Visual C# -> Windows
+// Classic Desktop -> WPF App
+
+namespace WpfApp1
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            // L19 Initializes and displays the window
+            InitializeComponent();
+
+            // L19 You can set window properties in code
+            this.Title = "Mouse Position";
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+        }
+
+        // ----------- Tutorial 19 starts here -----------
+        //
+        // This method was generated from the MainWindow.xaml after typing MouseMove= 
+        // in the  MainWindow.xaml, we then click on the 'new event handler' popup to generate our method
+        private void Window_MouseMove(object sender, MouseEventArgs e)
+        {
+            // when mouse moves, display x and y coordinates in the Title, 'this' is the mouse
+            Title = "x / y : " + e.GetPosition(this).ToString();
+
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("The app is Closing", "Close app");
+            this.Close();
+        }
+
+        private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.ShowDialog();
+        }
+
+        private void BtnSaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.ShowDialog();
+        }
+
+        // ************** Tutorial 22 Calendar start ***************
+        private void MyCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Get a reference to the calendar
+            var calendar = sender as Calendar;
+
+            // Check that it has a value, SelectedDate is what user clicks on, and value is checked 
+            if (calendar.SelectedDate.HasValue)
+            {
+                // display the date in the textbox
+                DateTime date = calendar.SelectedDate.Value;
+
+                // old VS 2017 has a bug, when selecting date, when it first starts
+                // so we need to use a try statement, to put the value in our textbox
+                try
+                {
+                    tbDateSelected.Text = date.ToShortDateString();
+                }
+                catch (NullReferenceException)
+                { }
+            }
+        }
+
+        // ************** Tutorial 22 Draw start ***************
+
+        // cature the Drawing Buttons clicks
+        private void DrawButton_Click(object sender, RoutedEventArgs e)
+        {
+            // get reference of what radio button was clicked on
+            var radioButton = sender as RadioButton;
+            // gets which radio button was pressed
+            string radioBPressed = radioButton.Content.ToString();
+
+            // change the setting to whatever the button, clicked is
+            if (radioBPressed == "Draw")
+            {
+                // .Ink represents drawing
+                this.DrawingCanvas.EditingMode = InkCanvasEditingMode.Ink;
+            }
+            else if (radioBPressed == "Erase")
+            {
+                // .EraseByStroke represents erase
+                this.DrawingCanvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
+            }
+            else if (radioBPressed == "Select")
+            {
+                // .Select represents select
+                this.DrawingCanvas.EditingMode = InkCanvasEditingMode.Select;
+            }
+        }
+
+        // cature the DrawPanel Key clicks
+        // cast e as an integer, this is used to change the strokes size and color
+        private void DrawPanel_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((int)e.Key >= 35 && (int)e.Key <= 68 && (int)e.Key != 55)
+            {
+                string s = e.Key.ToString();
+               
+
+                    foreach (char c in s)
+                {
+                    int i = ((int)c);
+                    var x = e.Key;
+        MessageBox.Show($"KeyCode# = {x} \nascii = {i.ToString()} \nHex = {e.Key.ToString("X")}", e.Key.ToString());
+                }
+                switch ((int)e.Key)
+                {
+                    // 35 represents the number 1, on our computer keyboard
+                    // if keyboard 1 pressed change width and height
+                    case 35:
+                        strokeAttr.Width = 2;
+                        strokeAttr.Height = 2;
+                        break;
+                    case 36:
+                        strokeAttr.Width = 4;
+                        strokeAttr.Height = 4;
+                        break;
+                    case 37:
+                        strokeAttr.Width = 6;
+                        strokeAttr.Height = 6;
+                        break;
+                    case 38:
+                        strokeAttr.Width = 8;
+                        strokeAttr.Height = 8;
+                        break;
+                    case 39:
+                        strokeAttr.Width = 10;
+                        strokeAttr.Height = 10;
+                        break;
+                    case 40:
+                        strokeAttr.Width = 12;
+                        strokeAttr.Height = 12;
+                        break;
+                    case 41:
+                        strokeAttr.Width = 14;
+                        strokeAttr.Height = 14;
+                        break;
+                    case 42:
+                        strokeAttr.Width = 16;
+                        strokeAttr.Height = 16;
+                        break;
+                    case 43:
+                        strokeAttr.Width = 18;
+                        strokeAttr.Height = 18;
+                        break;
+
+                    // change color: 45 = B key, 50 = G, 61 = R, 68 = Y
+
+                    case 45:
+                        strokeAttr.Color = (Color)
+                        ColorConverter.ConvertFromString("Blue");
+                        break;
+                    case 50:
+                        strokeAttr.Color = (Color)
+                        ColorConverter.ConvertFromString("Green");
+                        break;
+                    case 58:
+                        strokeAttr.Color = (Color)
+                        ColorConverter.ConvertFromString("Orange");
+                        break;
+                    case 59:
+                        strokeAttr.Color = (Color)
+                        ColorConverter.ConvertFromString("Purple");
+                        break;
+                    case 61:
+                        strokeAttr.Color = (Color)
+                        ColorConverter.ConvertFromString("Red");
+                        break;
+                    case 68:
+                        strokeAttr.Color = (Color)
+                        ColorConverter.ConvertFromString("Yellow");
+                        break;
+                }
+            }
+            if ((int)e.Key < 35 || (int)e.Key > 68 || (int)e.Key == 55)
+            {
+                strokeAttr.Color = (Color)
+                ColorConverter.ConvertFromString("Black");
+
+                string s = e.Key.ToString();
+                foreach (char c in s)
+                {
+                    int i = ((int)c);
+                    MessageBox.Show($"Key# = {(i - 21).ToString()} \nascii = {i.ToString()} \nHex = {e.Key.ToString("X")}", e.Key.ToString());
+                }
+               
+            }
+            
+        }
+        // use filestream to save the file as MyPicture.bin, 
+        // by saving the strokes from the drawing canvas, and creating the file
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (FileStream fs = new FileStream("MyPicture.bin", FileMode.Create))
+            {
+                this.DrawingCanvas.Strokes.Save(fs);
+            }
+        }
+
+        // use filestream to open the MyPicture.bin file and read or write to it.
+        // store it in the Stroke Collection sc
+        private void OpenButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (FileStream fs = new FileStream("MyPicture.bin", FileMode.Open, FileAccess.ReadWrite))
+            {
+                StrokeCollection sc = new StrokeCollection(fs);
+                this.DrawingCanvas.Strokes = sc;
+            }
+        }
+    }
+}

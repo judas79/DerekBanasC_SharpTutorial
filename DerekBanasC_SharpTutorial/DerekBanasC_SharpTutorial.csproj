@@ -127,6 +127,8 @@
     <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\21 MainWindow.xaml.cs.txt" />
     <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\21 MainWindow.xaml.txt" />
     <Content Include="21 Toolbar AddIcons OpenSaveFiles UseShortcuts CopyCutPaste ChangeFontsinComboboxes\MenuTextEditor_2.exe" />
+    <Content Include="22 InkCanvas KeyListeners Tabs Calendars InkCanvas PaintApp StackPanels Toolbars\22 MainWindow.xml.cs.txt" />
+    <Content Include="22 InkCanvas KeyListeners Tabs Calendars InkCanvas PaintApp StackPanels Toolbars\22 MainWindow.xml.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
     <Content Include="Resources\Copy.bmp" />
