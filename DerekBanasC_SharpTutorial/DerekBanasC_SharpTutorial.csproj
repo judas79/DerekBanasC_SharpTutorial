@@ -132,6 +132,8 @@
     <Content Include="23 Document API layoutManagers XPS FlowDocument FlowDocumentReader FlowDocumentPageViewer FlowDocumentScrollViewer and RichTextBox\23 MainWindow.xaml.cs.txt" />
     <Content Include="23 Document API layoutManagers XPS FlowDocument FlowDocumentReader FlowDocumentPageViewer FlowDocumentScrollViewer and RichTextBox\23 MainWindow.xaml.txt" />
     <Content Include="23 Document API layoutManagers XPS FlowDocument FlowDocumentReader FlowDocumentPageViewer FlowDocumentScrollViewer and RichTextBox\MenuTextEditor_3.exe" />
+    <Content Include="24 Paint App using SystemWindowsShapes Drawing Lines Ellipses Rectangles using Canvas\24 MainWindow.xaml.cs.txt" />
+    <Content Include="24 Paint App using SystemWindowsShapes Drawing Lines Ellipses Rectangles using Canvas\24 MainWindow.xaml.txt" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
     <Content Include="Resources\Copy.bmp" />
