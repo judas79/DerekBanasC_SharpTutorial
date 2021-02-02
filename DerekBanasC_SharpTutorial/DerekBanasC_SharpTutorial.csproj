@@ -134,6 +134,15 @@
     <Content Include="23 Document API layoutManagers XPS FlowDocument FlowDocumentReader FlowDocumentPageViewer FlowDocumentScrollViewer and RichTextBox\MenuTextEditor_3.exe" />
     <Content Include="24 Paint App using SystemWindowsShapes Drawing Lines Ellipses Rectangles using Canvas\24 MainWindow.xaml.cs.txt" />
     <Content Include="24 Paint App using SystemWindowsShapes Drawing Lines Ellipses Rectangles using Canvas\24 MainWindow.xaml.txt" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\25 App.config.txt" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\25 Program.cs.txt" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\25 Setup SQL readme.txt" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\App.Config.png" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\Customers.png" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\databaseExample.png" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\Microsoft SQL Server Management Studio 18.png" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\Products.png" />
+    <Content Include="25 SQLServer CreateTables UseSSMS AppConfig ConnectToSQLServerWithC-Sharp\SQL installation log info about where important files where installed.png" />
     <Content Include="HowToPublishExistingProjectToGithub.txt" />
     <Content Include="17 File IO Directories FileRead  WriteFiles, GetFileInfo FileStream StreamWriter BinaryWriter BinaryReader\17 ProgramCS.txt" />
     <Content Include="Resources\Copy.bmp" />

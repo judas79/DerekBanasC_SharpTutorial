@@ -1,0 +1,114 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+// to access the server these two libraries
+using System.Data.Common;
+using System.Configuration;
+
+namespace Derek_Banas_Tutorial_25_C_Sharp_DatabasesDBTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // App.config stores configuration data
+            // System.Data.SqlClient provides classes
+            // for accessing a SQL Server DB
+
+            // connectionString defines the DB name, and
+            // other parameters for connecting to the DB
+
+            // Configurationmanager provides access to
+            // config data in  App.config: (value="System.Data.SqlClient")
+            // and puts it in provider
+            string provider = ConfigurationManager.AppSettings["provider"];
+
+            // do the same as what we did for provider for our connection string; from AppConfig: it gets:
+            // value="Data Source=DESKTOP-0RADNIK\MSSQLSERVER01;Initial Catalog=StoreDB;Integrated Security=True;Pooling=False"
+            string connectionString = ConfigurationManager.AppSettings["connectionString"];
+
+            // DbProviderFactories generates an 
+            // instance of a DbProviderFactory
+            // which will enable us, with some more code, to pass queries to the database
+            DbProviderFactory factory = DbProviderFactories.GetFactory(provider);
+
+            // The DBConnection represents the DB connection, 
+            // then create the connection to our database
+            using (DbConnection connection =
+                factory.CreateConnection())
+            {
+                // Verify if a connection was made, if not send console message
+                if (connection == null)
+                {
+                    Console.WriteLine("Connection Error");
+                    Console.ReadLine();
+                    return;
+                }
+
+                // The DB data needed to open the correct DB
+                connection.ConnectionString = connectionString;
+
+                // Open the DB connection
+                connection.Open();
+
+                // Allows you to pass queries to the DB
+                DbCommand command = factory.CreateCommand();
+
+                // verify if these commands where issued
+                if (command == null)
+                {
+                    Console.WriteLine("Command Error");
+                    Console.ReadLine();
+                    return;
+                }
+
+                // Set the DB connection for commands
+                command.Connection = connection;
+
+                // create The query you want to issue
+                // ( select everything '*', from the 'Products' table
+                command.CommandText = "Select * From Products";
+
+                // DbDataReader will read the row results
+                // from the query
+                using (DbDataReader dataReader = command.ExecuteReader())
+                {
+                    Console.WriteLine("Products");
+                    // Advance to the next results, by cycling through them, using the read method
+                    while (dataReader.Read())
+                    {
+                        // Output results using row names, from the database
+                        Console.WriteLine($"{dataReader["ProdId"]} " +
+                            $"{dataReader["Product"]}");
+                    }
+                }
+
+                // HOME WORK 
+                // right clicked on 'Customers' then clicked  'Show Table Data'
+                // then added a '1', under the Custid tab, and 'Roddy' under the Name tab
+                // then created this query, for the Cutomers Table
+                // create The query you want to issue
+                // ( select everything '*', from the 'Products' table
+                command.CommandText = "Select * From Customers";
+
+                Console.WriteLine("\nCustomers:");
+                using (DbDataReader dataReader = command.ExecuteReader())
+                {
+                    // Advance to the next results, by cycling through them, using the read method
+                    while (dataReader.Read())
+                    {
+                        // Output results using row names, from the database
+                        Console.WriteLine($"{dataReader["CustId"]} " +
+                            $"{dataReader["Name"]}");
+                    }
+
+
+                    // keep console open
+                    Console.ReadLine();
+                }
+            }
+        }
+    }
+}
